@@ -24,6 +24,9 @@ def abrir_janela_pagamento(master):
 
     tree.heading("Serviço", text="Serviço")
     tree.heading("Preço", text="Preço (R$)")
+    tree.column("Serviço", width=200, anchor="w")
+    tree.column("Preço", width=100, anchor="center")
+
 
     for servico, preco in servicos.items():
         tree.insert("", "end", values=(servico, f"{preco:.2f}"))
